@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="samplee.js"></script>
+    <script>
+        function hello() {
+            document.getElementById("demos").innerHTML = "Hello World!";
+        }
+    </script>
+</head>
+<body>
+<p> Inline Javascript Example</p>
+    <p id="demo">Javascript can change the HTML</p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 
+'Hello World!'">Click Me!</button>
+<p> Internal Javascript Example</p>
+<p id="demos" style="color: green;">Javascript can change the HTML</p>
+<button type="button" onclick="hello()">Internal Javascript!</button>
+<p> External Javascript Example</p>
+<p id="demoss" style="color: green;">Javascript can change the HTML</p>
+<button type="button" onclick="hellos()">External Javascript!</button>
+
+<p>output methods</p>
+<script>
+    document.write(5+6);
+</script>
+<!-- <script>
+    window.alert(5+6);
+</script> -->
+<script>
+    console.log(5+6);//11
+</script>
+<br>
+<script>
+   let x, y;
+   x = 5 + 6; //11
+   y = x * 10; //110
+   document.write(x, "<br>");
+   document.write(y);
+   console.log(y);
+</script>
+
+<button onclick="window.print()">Print this page</button>
+
+<!-- <script>
+confirm("Do you want to delete this file?");
+</script> -->
+
+<!-- <script>
+var usr_inpt = prompt("Enter your name:");
+document.write(usr_inpt);
+</script> -->
+
+<p>Arithmetic-Operators</p>
+<script>
+let a = 20;
+let b = 10;
+document.write("addition", a+b, "<br>"); //addition
+document.write(a-b, "<br>"); //subtraction
+document.write(a*b, "<br>"); //multiplication
+document.write(a/b, "<br>"); //division
+document.write(a%b, "<br>"); //modulus
+</script>
+
+
+<p>Assignment-Operators</p>
+<script>
+let c = 20;
+let d = 10;
+document.write(c,"<br>"); //only c
+document.write(c += 3, "<br>"); //assignment addition
+document.write(c -= 3, "<br>"); //assignment subtraction
+document.write(c *= 3, "<br>"); //assignment multiplication
+document.write(c /= 3, "<br>"); //assignment division
+document.write(c %= 3, "<br>"); //assignment modulus
+document.write(c += d, "<br>"); //assignment modulus
+
+
+</script>
+
+<p>Comparision-Operators</p>
+<script>
+let e = 20;
+let f = 10;
+document.write(e == 20, "<br>");//equals to
+document.write(e != 20, "<br>");//not equal to
+document.write(e > 20, "<br>");//Greater than
+document.write(e >=20, "<br>");//Greater than or equal to
+document.write(e < 20, "<br>");//Less than
+document.write(e <= 20, "<br>");//Less than or equal to
+</script>
+
+
+
+
+<p>Logical-Operators</p>
+<script>
+let g = true;
+let h = true;
+let i = false;
+document.write(g && h, "<br>");	//true (multiply)
+document.write(g || h, "<br>"); //true (sum)
+document.write(!i, "<br>"); //true (reverse)
+</script>
+
+
+
+
+<p>Ternary-Operators</p>
+<script>
+let j = 10;
+let k = 20;
+result = (j > k) ? 100 : 200; //200 will get printed
+document.write (result);
+</script>
+
+<p>If Else Condition</p>
+<script>
+    let user_register=false;
+if (user_register==true){
+    document.write ("Please log in");
+}
+else{
+    document.write ("Please create account");
+ }
+</script>
+
+
+
+
+
+<p>Switch Condition</p>
+<script>
+    pay= "UPI";
+switch(pay){
+    case "wallet":
+        document.write("selected1:"+ pay);
+        break;
+    case "UPI" :
+        document.write("selected2:"+ pay);
+        break;
+    case "credit card":
+        document.write("selected3:"+pay);
+        break;
+    default:
+        document.write("Error");
+}
+</script>
+
+
+<p>For Loop</p>
+<script>
+let price = 0; // Initial Prize Money
+const lost = "Incorrect Answer!!\n---Better Luck Next Time";
+console.log(" !! WELCOME TO KBC !!");
+
+for (let i = 1; i < 4; i++) {
+    let ans = ""; // Reset answer for each question
+
+    // Question set
+    switch (i) {
+        case 1:
+            ans = prompt("What does not grow on a tree according to a popular Hindi saying?\n [a: Money, b: Flower, c: Leaves, d: Fruits] : ");
+            if (ans === 'a') {
+                price += 1000 * i; // Increment prize money only if the answer is correct
+                console.log("Correct Answer! Your Prize Money is : ₹" + price);
+            } else {
+                console.log(lost);
+                break; // Exit the loop if the answer is wrong
+            }
+            break;
+
+        case 2:
+            ans = prompt("Which city is known as the Pink City in India?\n [a: Bangalore, b: Mysore, c: Jaipur, d: Kochi] : ");
+            if (ans === 'c') {
+                price += 1000 * i;
+                console.log("Correct Answer! Your Prize Money is : ₹" + price);
+            } else {
+                console.log(lost);
+                break;
+            }
+            break;
+
+        case 3:
+            ans = prompt("How many states are there in India?\n [a: 28, b: 29, c: 31, d: 30] : ");
+            if (ans === 'a') {
+                price += 1000 * i;
+                console.log("Correct Answer! Your Prize Money is : ₹" + price);
+                console.log("---------Congratulations! You Won The KBC---------");
+            } else {
+                console.log(lost);
+                break;
+            }
+            break;
+
+        default:
+            console.log("Something went wrong!");
+            break;
+    }
+
+    if (ans !== 'a' && i === 1 || ans !== 'c' && i === 2 || ans !== 'a' && i === 3) {
+        break; // Stop execution if the answer is wrong
+    }
+}
+
+</script>
+
+<p>Type of functions</p>
+
+<script>
+let name = "Javascript";
+console.log(typeof name);   //string
+let age = 15; 
+console.log(typeof age); //number
+console.log(parseInt("123"));        // 123
+console.log(parseInt("123.99"));     // 123 (decimal removed)
+console.log(parseInt("10px"));       // 10 (stops at non-number)
+console.log(parseInt("abc"));        // NaN (Not a Number) First letter to be an number from 0-9 
+console.log(Boolean(1));        // true
+console.log(Boolean(0));        // false
+console.log(Boolean("hello"));  // true
+console.log(Boolean(""));       // false
+console.log(Boolean(null));     // false
+console.log(Boolean(undefined));// false
+console.log(parseFloat("123.45"));   // 123.45
+console.log(parseFloat("10.99abc")); // 10.99
+console.log(parseFloat("100"));      // 100
+console.log(parseFloat("abc"));      // NaN First letter to be an number from 0-9 
+console.log(Number("123"));      // 123
+console.log(Number("123.45"));   // 123.45
+console.log(Number(""));         // 0
+console.log(Number("abc"));      // NaN First letter to be an number from 0-9 
+console.log(Number(true));       // 1
+console.log(Number(false));      // 0
+console.log(String(123));        // "123"
+console.log(String(true));       // "true"
+console.log(String(null));       // "null"
+console.log(String(undefined));  // "undefined"
+console.log(String(123.45));     // "123.45"
+</script>
+
+
+
+
+<p>While Loop - Currency Corrector </p>
+<script>
+let currency;
+let value;
+let total = 0;
+while(true){
+currency=(prompt("Currency is present enter y:"));
+if (currency == "y"){
+value=parseInt(prompt("Enter the Note amount:"));
+if (value  == 10 ||  value == 20 || value == 50 || value == 100 || value == 500){
+console.log(value + " Real currency");
+total+=value;
+}
+else {
+console.log( "Fake currency");
+}
+}
+else{
+break;
+}
+}
+console.log(total);
+</script>
+<p>Do-While Loop - OTT Platform </p>
+<script>
+var pay=0;
+var episode= 1;
+console.log("welcome to mxplayer");
+console.log("Money Heist");
+do{
+console.log("Current episode:"+ episode);
+skip= prompt("if you want to skip episode "+ episode + " enter y :");
+if (skip == "y"){
+console.log("skip episode:"+episode);
+episode+=1;
+continue //skip current iteration
+}
+console.log("episode:"+ episode +" completed");
+episode+=1;
+
+if (pay!=1){
+var pay = prompt(("if you want to play next  episode please pay.Select option : \n 1.pay \n 2.cancel \n")); }
+parseInt(pay);
+}
+while(pay==1 && episode<5)
+if (pay==0){
+console.log("Not subscribe plz subscribe for next episode");
+}
+else{
+console.log("Episode completed");
+}
+</script>
+
+
+
+</body>
+</html>

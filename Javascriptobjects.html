@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript objects</title>
+</head>
+<body>
+  <h3>Object Literal</h3>  
+  <script>
+    const user = {    //creating an object
+      name: "Riya",     //first property of the object 
+      role: "Developer"  //second property of the object 
+    };
+    document.write(user.name+" "+user.role); //to display the objects 
+    document.write("<br>");  
+
+  const student = { 
+        name: "Riya", 
+        rollNo: 21,  
+        course: "BSc", 
+        college: "ABC College"
+ };
+  document.write(student.name+" "+student.rollNo+" "+student.course+" "+student.college);
+</script>
+
+ <h3>Using New Object</h3>  
+  <script>
+    const users = new Object(); //used new keyword to create an object
+      users.name = "Shyam"; 
+      users.role = "Testing";
+      document.write(users.name+" "+users.role);//to display the object properties
+  </script>
+
+   <h3>Using Constructor Function</h3>  
+  <script>
+    function Person(name, age) { //Person is the object, name & age are parameters
+    this.name = name;  //this keyword is representing the current object
+    this.age = age;
+    }
+
+    p = new Person("Roshan", 30); //creating a new object from the existing object using the new keyword and the object name
+    document.write(p.name+" "+p.age);//display the output using the new object
+  </script>
+
+  <h3>Nested Object - Object inside another object</h3>  
+  <script>
+    const employee = {
+      name: "Riya",
+      address: {
+        city: "Pune",
+        pincode: 411001
+      }
+    };
+    document.write(employee.name+" "+employee.address.city+" "+employee.address.pincode);
+
+  </script>
+
+
+
+<h3>Dot Notation objectName.propertyName</h3>  
+<script>
+  const cart = {
+    item: "Laptop",
+    price: 50000,
+    "discount price": 45000
+};
+ document.write(cart.item+" "+cart.price); //since discount price is having a space dot notation will not work
+  </script>
+
+<h3>Bracket Notation objectName["propertyName"]</h3>  
+<script>
+  const carts = {
+    item: "Laptop",
+    price: 50000,
+    "discount price": 45000
+};
+ document.write(carts["item"]+" "+carts["price"]+" "+carts["discount price"]);
+  </script>
+
+
+
+<h3>CRUD Operation - Add</h3>
+<script>
+  const cartd = {
+    item: "Laptop",
+    price: 50000,
+    quantity: 1
+};
+cartd.color = "Black"; //adding one more key(property) -> object.newproperty
+
+ document.write(cartd["item"]+" "+cartd["price"]+" "+cartd["quantity"]+" "+cartd["color"]);//display values
+</script>
+
+
+<h3>CRUD Operation - Update</h3>
+<script>
+  const cartds = {
+    item: "Laptop",
+    price: 50000,
+    quantity: 1
+};
+cartds.quantity = 2; //updating the existing property value 
+
+ document.write(cartds["item"]+" "+cartds["price"]+" "+cartds["quantity"]);
+</script>
+
+
+
+
+<h3>CRUD Operation - Delete</h3>
+<script>
+  const cartdd = {
+    item: "Laptop",
+    price: 50000,
+    quantity: 1,
+    color: "Black"
+};
+delete cartdd.color; //delete the existing property(key)
+
+ document.write(cartdd["item"]+" "+cartdd["price"]+" "+cartdd["quantity"]+" "+cartdd["color"]);
+</script>
+
+
+
+<h3>Use of Object Methods</h3>  
+<script>
+const cartss = {
+  item: "Laptop",
+  price: 50000,
+  quantity: 1
+};
+
+//Use of Object.keys
+document.write(Object.keys(cart), "<br>")  // To display only the keys(property names) we use this method
+
+//Use of Object.values
+document.write(Object.values(cart), "<br>") // To display only the values of the property we use this method
+
+//Use of Object.entries
+document.write(Object.entries(cart), "<br>") //To display both key-values together we use this method
+</script>
+
+
+
+<h3>Shorthand Properties</h3>  
+<script>
+let name = "Rahul";
+let age = 25;
+
+const person = { name, age };
+
+console.log(person); 
+document.write(JSON.stringify(person)); //To make this convert into a string (it want to accept the json format)
+</script>
+
+<h3>Computed Property</h3>  
+<script>
+const keyName = "email";
+const useri = {
+  [keyName]: "rahul@gmail.com"
+};
+document.write(useri.email);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<h3>Functions</h3>    
+<script>
+function greet(name) {         
+document.write("Hello, " + name + "!"); //statement to be executed
+}
+greet("student"); //calling the function
+</script>
+
+<h3>String Methods to UpperCase and LowerCase</h3>  
+<script>
+    let text = "Javascript";
+    document.write(text.toUpperCase());//change it to uppercase
+    document.write(text.toLowerCase());//change it to lowercase
+</script>
+
+<h3>String - Trim method</h3>  
+<script>
+    var s1 = "   javascript is case sensitive       ";//remove the unwanted space
+    var s2 = s1.trim();
+    document.write(s2);
+</script>
+
+<h3>Math method</h3>  
+<script>
+   document.write(Math.PI); 
+   document.write(Math.max(1,2,3)); 
+   document.write(Math.random());
+</script>
+
+<h3>Date method</h3>  
+<script>
+   var date = new Date();//automatically take the current system date
+   document.writeln("Current Date:" + date.getFullYear(), "<br>");
+   document.writeln("Current Date:" + (date.getMonth()+1), "<br>");
+   document.writeln("Current Date:" + date);
+</script>
+
+<h3>Array method - push</h3>  
+<script>
+   let arr = [1,2,3]; 
+   arr.push(4); //add a value at last to the existing array
+   document.write(arr);
+   arr.pop();//remove the last value in the existing array
+   document.write(arr);
+</script>
+
+<h3>Array method - map</h3>  
+<script>
+   let nums = [1,2,3];
+   let squares = nums.map(num => num * num);//mapping (eg:abc=123)
+   document.write(squares);
+</script>
+
+<h3>Pure Functions</h3>
+<script>
+function income(salary){
+  document.write(salary * 2); //no side effects-same input=same output
+}
+income(20000); 
+</script>
+
+
+<h3>impure Function</h3>
+<script>
+let increment = 2500;
+function income(salary){
+  document.write(salary * 2 + increment);//it will have side effects
+}
+income(20000) //same input but different output
+</script>
+
+<h3>First class Function</h3>
+<script>
+//function can be assigned to the variable
+    const greets = function(name) {  
+    document.write("Hello " + name);
+};
+greets("Student")
+</script>
+
+<h3>Higher-Order Function</h3>
+<script>
+//function can be used as a parameter, variable, arguments
+function repeat(action, times) {
+for (let i = 0; i < times; i++) {
+action();
+}
+}
+// A simple function to be passed as an argument
+function sayHello() {
+document.write("Hello!");
+}
+// Using the higher-order function
+repeat(sayHello, 3);
+</script>
+
+<h3>Function Declaration</h3>
+<script>
+//function declaration using template string (`${}`) = expression inside the string
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+document.write(greet("Students"));
+</script>
+
+
+<h3>Function Expression</h3>
+<script>
+    //used arithmetic expression inside the template string
+let num1 = 5;
+let num2 = 10;
+let result = `The sum of ${num1} and ${num2} is ${num1 + num2}.`;
+document.write(result);
+</script>
+
+
+<h3>Function Expression</h3>
+<script>
+const greeti = function(name) {
+    return `Hello, ${name}!`;
+}
+document.write(greeti("Students"));
+</script>
+
+<h3>Arrow Function</h3>
+<script>
+    //reduce the code of a function, we can remove {}, function keyword, function name, return keyword
+const greetie = (name) => `Hello, ${name}!`;
+document.write(greetie("Students"));
+</script>
+
+
+
+<h3>Function with Default Parameters</h3>
+<script>
+    //default value if the parameter value is not passed
+function greeties(name = 'Guest') {
+  return `Hello, ${name}!`;
+}
+document.write(greeties());
+</script>
+
+
+
+<h3>Anonymous Function</h3>
+<script>
+    //without function name (unnamed function) but we have to use ()outside the entire function
+(function () {
+    document.write("Welcome to ITVEDANT!");
+})  ();
+</script>
+
+<h3>Math to fixed</h3>
+<script>
+let num = 123.4567;
+document.write(num.toFixed(2)); //Fixing the digits next to the . decimal places
+</script>
+
+<h3>Math to Precision</h3>
+<script>
+let numss = 123.4567;  
+document.write(numss.toPrecision(4));//Fixing the no. of digits from the beginning 
+</script>
+
+<h3>Math to round</h3>
+<script>
+let numsi = 123.456; //123
+document.write(Math.round(numsi));//Round the entire value. 
+</script>
+
+<h3>Math to floor</h3>
+<script>
+let numsf = 123.456; //123
+document.write(Math.floor(numsf));//Round the entire value to the lowest number 
+</script>
+
+
+<h3>Math to ceil</h3>
+<script>
+let numsc = 123.456; //124
+document.write(Math.ceil(numsc)); //Round the entire value to the highest number
+</script>
+
+<h3>Find the distance</h3>
+<script>
+    //To find how the user is going to travel we need to declare variables to receive the input
+const walk = 3; //average 3km/h
+const bike = 60;//average 60km/h
+const car = 80;//average 80km/h
+//latitude=north to south, longitude=east to west (finding in the map)
+var lat1 = 18.943889; //start point
+var lon1 = 72.835991; //start point
+var lat2 = 19.218330;//end point
+var lon2 = 72.978088;// end point
+
+function distance() {
+// Convert degrees to radians (because sin, cos will accept only radian values)
+var lat1Rad = lat1 * Math.PI / 180;
+var lon1Rad = lon1 * Math.PI / 180;
+var lat2Rad = lat2 * Math.PI / 180;
+var lon2Rad = lon2 * Math.PI / 180;
+
+// haversine formula to calculate
+distance = Math.acos(Math.sin(lat1Rad) * Math.sin(lat2Rad) + Math.cos(lat1Rad) * 
+Math.cos(lat2Rad) * Math.cos(lon2Rad - lon1Rad)) * 6371;  //Earth radius in kilometer
+
+console.log(distance) //first output exact distance
+console.log(distance.toFixed(2) + "KM"); //to make it readable
+}
+
+distance(); //calling the function - displays the distance
+
+//To get the user input we use prompt
+var mode = prompt("select the mode: \n1.walk \n2.bike \n3.car")
+if (mode == '1') {
+time = distance / walk  //To find the time taken by walk 
+}
+else if (mode == '2') {
+time = distance / bike  //To find the time taken by bike
+}
+else if (mode == '3') {
+time = distance / car   //To find the time taken by car
+}
+//the result we got in the variable called time converting into hrs/mins
+document.write(time)
+if (time < 1) {  //if the time is between 12 am to 1 am
+console.log("time:" + time.toFixed(2) + "Min") 
+}
+else {   //if it is not mins then it is hours
+console.log("time:" + time.toFixed(2) + "Hrs")
+}
+</script>
+</body>
+</html>

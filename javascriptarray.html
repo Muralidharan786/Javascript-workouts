@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript arrays</title>
+</head>
+<body>
+  <h3>Array Literal</h3>  
+  <script>
+    let box = ["red", "Apple", "banana",89];
+     document.write(box);
+  </script>
+    <h3>Array Literal using loop</h3>  
+  <script>
+  let boxy = ["red", "Apple", "banana",89];
+      for(i=0;i<box.length;i++) {    //use for loop method to display the array values one by one
+    document.write(boxy[i] + "<br/>");
+   } 
+</script>
+  <h3>Push method</h3>  
+<script>
+   let boxes = ["red", "Apple", "banana",89]; 
+   boxes.push(10); //add a value at last to the existing array
+   document.write(boxes);
+</script>
+ <h3>unshift method</h3>  
+<script>
+   let boxe = ["red", "Apple", "banana",89]; 
+   boxe.unshift("table");  //add a value at the beginning of the array
+   document.write(boxe);
+</script>
+
+ <h3>includes method</h3>  
+<script>
+   let boxi = ["red", "Apple", "banana",89]; 
+   console.log(boxi.includes("car")); //it will check whether the array element is present or not - true or false
+</script>
+
+<h3>length method</h3>  
+<script>
+   let boxie = ["red", "Apple", "banana",89]; 
+   document.write(boxie.length);//to find the length of your array
+</script>
+
+
+<h3>typeof method - to find the data type</h3>  
+<script>
+   let boxiee = ["red", "Apple", "banana", 89]; 
+   document.write(typeof boxiee);  //datatype of the array
+</script>
+
+
+
+
+<h3>for loop</h3>
+<script>
+let numbers = [10, 20, 30];
+
+for (let i = 0; i < numbers.length; i++) {
+  document.write(numbers[i]+ "<br/>");
+}
+</script>
+
+<h3>for each</h3>
+<script>
+let numbersi = [10, 20, 30];
+
+numbersi.forEach(num => {
+  document.write(num + "<br/>");
+});
+</script>
+
+<h3>for of() loop</h3>
+<script>
+  let numberser = [10, 20, 30];
+
+for (let num of numberser) {
+ document.write(num + "<br/>");
+}
+</script>
+
+
+<h3>Splice - array.splice(index, count, item) </h3>
+<script>
+let allOrders = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+allOrders.splice(1, 1, "pen"); // ["Laptop","Keyboard","Headphones"]
+document.write(allOrders); 
+</script>
+
+
+
+
+
+
+<h3>Concat method</h3>
+<script>
+let allOrders1 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let newOrders = ["Monitor", "Webcam"];
+let combinedOrders = allOrders.concat(newOrders);
+document.write(combinedOrders);
+// output:
+// ["Laptop","Mouse","Keyboard","Headphones","Monitor","Webcam"]
+</script>
+
+<h3>Sort method</h3>
+<script>
+let allOrders2 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+document.write(allOrders2.sort());
+// output:
+// ["Headphones","Keyboard","Laptop","Mouse"]
+</script>
+
+<h3>Reverse method</h3>
+<script>
+let allOrders3 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+document.write(allOrders3.reverse());
+// output:
+// ["Headphones","Keyboard","Mouse","Laptop"]
+</script>
+
+
+<h3>slice method</h3>
+<script>
+let allOrders4 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let slicedOrders = allOrders4.slice(1, 3);
+document.write(slicedOrders);
+// output:
+// ["Mouse","Keyboard"]
+</script>
+
+
+<h3>pop method</h3>
+<script>
+let allOrders5 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+document.write(allOrders5.pop());
+// output:
+// ["Laptop","Mouse","Keyboard"]
+</script>
+
+<h3>shift method</h3>
+<script>
+let allOrders6 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+document.write(allOrders6.shift());
+// output:
+// ["Mouse","Keyboard","Headphones"]
+</script>
+
+<h3>indexOf method</h3>
+<script>
+let allOrders7 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let index = allOrders7.indexOf("Keyboard");
+document.write(index);
+// output:
+// 2
+</script>
+
+<h3>Join method</h3>
+<script>
+let allOrders8 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+
+let text = allOrders8.join(", ");
+document.write(text);
+// output:
+// "Laptop, Mouse, Keyboard, Headphones"
+</script>
+
+<h3>Delete method</h3>
+<script>
+let allOrders9 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+delete allOrders9[1];
+document.write(allOrders9);
+// output:
+// ["Laptop", <empty>, "Keyboard", "Headphones"]
+</script>
+
+<h3>Map method</h3>
+<script>
+let allOrders10 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let mappedOrders = allOrders10.map(item => item.toUpperCase());
+document.write(mappedOrders);
+// output:
+// ["LAPTOP","MOUSE","KEYBOARD","HEADPHONES"]
+</script>
+
+
+
+<h3>Filter method</h3>
+<script>
+let allOrders11 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let filteredOrders = allOrders.filter(item => item.length > 5);
+document.write(filteredOrders);
+// output:
+// ["Laptop","Keyboard","Headphones"]
+</script>
+
+
+<h3>Reduce method</h3>
+<script>
+let allOrders12 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let totalChars = allOrders12.reduce((sum, item) => sum + item.length, 0);
+document.write(totalChars);
+// output:
+// 29
+</script>
+
+
+<h3>Spread operator</h3>
+<script>
+let allOrders13 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let copiedOrders = [...allOrders13];
+document.write(copiedOrders);
+// output:
+// ["Laptop","Mouse","Keyboard","Headphones"]
+</script>
+
+<h3>Rest operator</h3>
+<script>
+let allOrders14 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
+let [firstOrder, ...remainingOrders] = allOrders14;
+document.write(allOrders14);
+// output:
+// firstOrder = "Laptop"
+// remainingOrders = ["Mouse","Keyboard","Headphones"]
+</script>
+
+<h3>Array Destructuring</h3>
+<script>
+let nums = [10, 20, 30]
+let [a, b, c] = nums
+console.log(a)
+console.log(b)
+console.log(c)
+</script>
+
+<h3>Without Array Destructuring</h3>
+<script>
+let numss = [10, 20, 30];
+let d = numss[0];
+let e = numss[1];
+let f = numss[2];
+console.log(d)
+console.log(e)
+console.log(f)
+</script>
+
+</body>
+</html>
