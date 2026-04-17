@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript arrays</title>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grandparent = document.getElementById("grandparent");
+  const parent = document.getElementById("parent");
+  const child = document.getElementById("child");
+
+//   grandparent.addEventListener("click", () =>
+//     console.log("Grandparent - Capturing"), true
+//   );
+
+//   parent.addEventListener("click", () =>
+//     console.log(">>> Parent - Capturing"), true
+//   );
+
+//   child.addEventListener("click", () =>
+//     console.log("Child - Capturing"), true
+//   );
+// });
+
+/* Target + Bubbling phase */
+child.addEventListener("click", () =>
+  console.log("Child - Target / Bubbling")
+);
+
+parent.addEventListener("click", () =>
+  console.log("Parent - Bubbling")
+);
+
+grandparent.addEventListener("click", () =>
+  console.log("Grandparent - Bubbling")
+);
+});
+</script>
+</head>
+<body>
+<h3>Capturing-Bubbling-Target Method</h3>
+<div id="grandparent">
+  <div id="parent">
+    <button id="child">Click me</button>
+  </div>
+</div>
+
+</body>
+</html>

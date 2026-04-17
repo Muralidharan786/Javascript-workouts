@@ -55,7 +55,7 @@
 <script>
 let numbers = [10, 20, 30];
 
-for (let i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) { //for loop - it will iterate until the condition become false
   document.write(numbers[i]+ "<br/>");
 }
 </script>
@@ -64,8 +64,8 @@ for (let i = 0; i < numbers.length; i++) {
 <script>
 let numbersi = [10, 20, 30];
 
-numbersi.forEach(num => {
-  document.write(num + "<br/>");
+numbersi.forEach(num => {      //take each element of the array and process or execute it
+  document.write(num + "<br/>");  
 });
 </script>
 
@@ -73,8 +73,8 @@ numbersi.forEach(num => {
 <script>
   let numberser = [10, 20, 30];
 
-for (let num of numberser) {
- document.write(num + "<br/>");
+for (let num of numberser) {     //we used for of loop mainly to fetch all the elements of the array(like object properties)
+ document.write(num + "<br/>"); //print the array elements like a loop
 }
 </script>
 
@@ -82,21 +82,16 @@ for (let num of numberser) {
 <h3>Splice - array.splice(index, count, item) </h3>
 <script>
 let allOrders = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-allOrders.splice(1, 1, "pen"); // ["Laptop","Keyboard","Headphones"]
-document.write(allOrders); 
+allOrders.splice(1, 1, "pen"); //remove the selected element and replace the element if necessary
+document.write(allOrders); // ["Laptop","Keyboard","Headphones"]
 </script>
-
-
-
-
-
 
 <h3>Concat method</h3>
 <script>
 let allOrders1 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
 let newOrders = ["Monitor", "Webcam"];
-let combinedOrders = allOrders.concat(newOrders);
-document.write(combinedOrders);
+let combinedOrders = allOrders.concat(newOrders); //combining two arrays
+document.write(combinedOrders); 
 // output:
 // ["Laptop","Mouse","Keyboard","Headphones","Monitor","Webcam"]
 </script>
@@ -104,81 +99,73 @@ document.write(combinedOrders);
 <h3>Sort method</h3>
 <script>
 let allOrders2 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-document.write(allOrders2.sort());
-// output:
-// ["Headphones","Keyboard","Laptop","Mouse"]
+document.write(allOrders2.sort().reverse()); //sort the array elements in the ascending order 
+// (for descending you need to add reverse() at last)
+// output of ascending order ["Headphones","Keyboard","Laptop","Mouse"]
+// output of ascending order ["Mouse","Laptop", "Keyboard","Mouse"]
 </script>
+
 
 <h3>Reverse method</h3>
 <script>
 let allOrders3 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-document.write(allOrders3.reverse());
-// output:
-// ["Headphones","Keyboard","Mouse","Laptop"]
+document.write(allOrders3.reverse()); //reverse the given array elements 
+// output: ["Headphones","Keyboard","Mouse","Laptop"]
 </script>
 
 
 <h3>slice method</h3>
 <script>
 let allOrders4 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-let slicedOrders = allOrders4.slice(1, 3);
-document.write(slicedOrders);
-// output:
-// ["Mouse","Keyboard"]
+let slicedOrders = allOrders4.slice(1, 3); //slice the required elements alone using slice(start, end)
+document.write(slicedOrders); // ["Mouse","Keyboard"]
 </script>
-
 
 <h3>pop method</h3>
 <script>
 let allOrders5 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-document.write(allOrders5.pop());
-// output:
-// ["Laptop","Mouse","Keyboard"]
+document.write(allOrders5.pop()); //removes the last element of an array
+// output: ["Laptop","Mouse","Keyboard"]
 </script>
 
 <h3>shift method</h3>
 <script>
 let allOrders6 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-document.write(allOrders6.shift());
-// output:
-// ["Mouse","Keyboard","Headphones"]
+allOrders6.shift(); //removes the first element of an array
+document.write(allOrders6); // output: ["Mouse","Keyboard","Headphones"]
 </script>
+
 
 <h3>indexOf method</h3>
 <script>
 let allOrders7 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-let index = allOrders7.indexOf("Keyboard");
-document.write(index);
-// output:
-// 2
+let index = allOrders7.indexOf("Keyboard"); //returns the index of the element or -1 if not found
+document.write(index);// output: 2
 </script>
+
+
+
 
 <h3>Join method</h3>
 <script>
 let allOrders8 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
 
-let text = allOrders8.join(", ");
-document.write(text);
-// output:
-// "Laptop, Mouse, Keyboard, Headphones"
+let text = allOrders8.join(", "); //join the array elements by converting into a single string using a separator
+document.write(text); // output: Laptop, Mouse, Keyboard, Headphones
 </script>
 
 <h3>Delete method</h3>
 <script>
 let allOrders9 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-delete allOrders9[1];
-document.write(allOrders9);
-// output:
-// ["Laptop", <empty>, "Keyboard", "Headphones"]
+delete allOrders9[1]; //delete the particular element by using the index value and the array will have empty space
+document.write(allOrders9); // output: ["Laptop", <empty>, "Keyboard", "Headphones"]
 </script>
 
 <h3>Map method</h3>
 <script>
 let allOrders10 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-let mappedOrders = allOrders10.map(item => item.toUpperCase());
-document.write(mappedOrders);
-// output:
-// ["LAPTOP","MOUSE","KEYBOARD","HEADPHONES"]
+let mappedOrders = allOrders10.map(item => item.toUpperCase()); //instead of using the loops we are using this predefined methods
+document.write(mappedOrders); // output: ["LAPTOP","MOUSE","KEYBOARD","HEADPHONES"]
 </script>
 
 
@@ -187,40 +174,35 @@ document.write(mappedOrders);
 <script>
 let allOrders11 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
 let filteredOrders = allOrders.filter(item => item.length > 5);
-document.write(filteredOrders);
-// output:
-// ["Laptop","Keyboard","Headphones"]
+document.write(filteredOrders); // output: ["Laptop","Keyboard","Headphones"]
 </script>
-
 
 <h3>Reduce method</h3>
 <script>
 let allOrders12 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
 let totalChars = allOrders12.reduce((sum, item) => sum + item.length, 0);
-document.write(totalChars);
-// output:
-// 29
+document.write(totalChars); // output: 29
 </script>
+
+
 
 
 <h3>Spread operator</h3>
 <script>
-let allOrders13 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-let copiedOrders = [...allOrders13];
-document.write(copiedOrders);
-// output:
-// ["Laptop","Mouse","Keyboard","Headphones"]
+let allOrders13 = ["Laptop", "Mouse", "Keyboard", "Headphones"]; //we used to convert into values using loops instead of that we use this method
+let copiedOrders = [...allOrders13]; //converting all the array elements into individual values and storing it
+document.write(copiedOrders); //output: ["Laptop","Mouse","Keyboard","Headphones"]
 </script>
 
 <h3>Rest operator</h3>
 <script>
 let allOrders14 = ["Laptop", "Mouse", "Keyboard", "Headphones"];
-let [firstOrder, ...remainingOrders] = allOrders14;
-document.write(allOrders14);
-// output:
-// firstOrder = "Laptop"
+let [firstOrder, ...remainingOrders] = allOrders14;//first element alone we have to define separately then the remaining together
+document.write(allOrders14); // output: firstOrder = "Laptop" 
 // remainingOrders = ["Mouse","Keyboard","Headphones"]
 </script>
+
+
 
 <h3>Array Destructuring</h3>
 <script>
@@ -230,6 +212,7 @@ console.log(a)
 console.log(b)
 console.log(c)
 </script>
+
 
 <h3>Without Array Destructuring</h3>
 <script>
@@ -241,6 +224,206 @@ console.log(d)
 console.log(e)
 console.log(f)
 </script>
+
+<h3>String length</h3>
+<script>
+let msg = "Hi JS";
+document.write(msg.length);  // 5
+</script>
+
+<h3>Char at</h3>
+<script>
+let word = "JavaScript";
+document.write(word.charAt(0));  // J
+document.write(word.charAt(4));  // S
+document.write(word.charAt(9));  // t
+</script>
+
+
+<h3>UpperCase</h3>
+<script>
+let city = "pune";
+document.write(city.toUpperCase()); // Output: PUNE
+</script>
+
+<h3>LowerCase</h3>
+<script>
+let texts = "HELLO WORLD";
+document.write(texts.toLowerCase()); // Output: hello world
+</script>
+
+<h3>Repeat</h3>
+<script>
+let star = "*";
+document.write(star.repeat(5)); // Output: *****
+</script>
+
+<h3>includes() method</h3>
+<script>
+let msgs = "I love JavaScript";
+document.write(msgs.includes("JavaScript")); // Output: true
+</script>
+
+<h3>slice(startInd, endInd) method</h3>
+<script>
+let msged = "Good Morning Javascript";
+document.write(msged.slice(5, 12)); //Morning
+document.write(msged.slice(13));  //Javascript
+</script>
+
+<h3>replace() method</h3>
+<script>
+let msgss = "Good Morning Javascript";
+document.write(msgss.replace("Morning", "Evening")); //Good Evening Javascript
+</script>
+
+<h3>replaceAll() method</h3>
+<script>
+let msgsds = "Good Morning Javascript Good Morning HTML";
+document.write(msgsds.replaceAll("Morning", "Evening")); //Good Evening Javascript Good Evening Javascript
+</script>
+
+
+<h3>indexOf() method</h3>
+<script>
+let msgsed = "Good Morning Javascript";
+document.write(msg.indexOf("Morning")); //5
+</script>
+
+<h3>valueOf() method</h3>
+<script>
+let msgeed = "Good Morning Javascript";
+document.write(msgeed.valueOf()); // Good Morning Javascript
+</script>
+
+
+<h3>startsWith(Value) method</h3>
+<script>
+let msgde = "Good Morning Javascript";
+document.write(msgde.startsWith("Good")); //true
+</script>
+
+<h3>endsWith(Value) method</h3>
+<script>
+let msgdd = "Good Morning Javascript";
+document.write(msgdd.endsWith("Javascript")); //true
+</script>
+
+
+
+<h3>substr(start, length) method</h3> 
+<script>
+let msgty = "Good Morning Javascript"; //this method allows to print the strings from start and based on the length
+document.write(msgty.substr(5, 6)); //Mornin
+</script>
+
+<h3>substring(startIndex, endIndex) method</h3>
+<script>
+let msgsb = "Good Morning Javascript";//this method allows to print the string based on start and end 
+document.write(msgsb.substring(0, 4)); //Good //end index is not included 
+</script>
+
+<h3>split(separator) method</h3>
+<script>
+let msgsp = "Good Morning Javascript";
+document.write(msgsp.split(" ")); //["Good", "Morning", "Javascript"]
+</script>
+
+<h3>Screen Object</h3>
+<script>  
+document.writeln("<br/>screen.width: "+screen.width);  
+document.writeln("<br/>screen.height: "+screen.height);  
+document.writeln("<br/>screen.availWidth: "+screen.availWidth);  
+document.writeln("<br/>screen.availHeight: "+screen.availHeight);  
+document.writeln("<br/>screen.colorDepth: "+screen.colorDepth);  
+document.writeln("<br/>screen.pixelDepth: "+screen.pixelDepth);  
+</script> 
+
+<h3>Console Methods</h3>
+<script>  
+console.log("This is a log message"); //logs general messages
+console.error("This is an error message"); //logs errors
+console.warn("This is a warning message"); //logs warnings
+// console.clear("This is a clear message"); //clear warnings
+</script>x
+
+<h3>Location Object</h3>
+<script>  
+ console.log(location.href); //file:///C:/Users/hp/Documents/Desktop/FSD-New
+ console.log(location.hostname); //javascriptarray.html
+ console.log(location.pathname); ///C:/Users/hp/Documents/Desktop/FSD-New/javascriptarray.html
+</script>
+
+<h3>History Object</h3>
+  <input type="button" value="Go Back" onclick="goback()"/>
+<script>
+ function goback() {
+	history.back();
+}
+</script>
+
+//home.html
+<h2>Home Page</h2>
+<a href="products.html">Go to Products</a>
+//products.html
+h2>Products Page</h2>
+<a href="mobile.html">Go to Mobile Page</a>
+
+//mobile.html
+<button onclick="goBack()">⬅ Back</button>
+<button onclick="goForward()">➡ Forward</button>
+<button onclick="goTwoSteps()">⏪ Go -2</button>
+
+<script>
+function goBack() {
+  history.back();   // Goes to previous page (products.html)
+}
+function goForward() {
+  history.forward(); // Goes forward (if available)
+}
+function goTwoSteps() {
+  history.go(-2);   // Goes back 2 pages (home.html)
+}
+</script>
+
+<h3>Length of the URL</h3>
+<p id="demo"></p>
+<script>
+let length = window.history.length;
+document.getElementById("demo").innerHTML = length;
+</script>
+
+<h3>setTimeout - OTP / Verification Message Delay</h3>
+<button onclick="sendOTP()">Send OTP</button>
+<p id="msg"></p>
+<script>
+function sendOTP() {
+  document.getElementById("msg").innerText = "Sending OTP...";
+
+  setTimeout(() => {
+    document.getElementById("msg").innerText = "OTP Sent ✔";
+  }, 3000);
+}
+</script>
+
+
+
+
+<h3>setInterval - Auto Refresh Notifications Count </h3>
+<p>New Notifications: <span id="count">0</span></p>
+
+<script>
+let count = 0;
+
+setInterval(() => {
+  count++;
+  document.getElementById("count").innerText = count;
+}, 1000);
+</script>
+
+
+
+
 
 </body>
 </html>
