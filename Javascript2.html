@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Example</title>
+        <!-- <script src="script.js"></script> -->
+    </head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+    let stack = [10, 20, 30, 40, 50];
+    stack.pop();    
+    console.log(stack); 
+</script>
+<script>
+    let arr = [5, 10, 15, 20, 25];
+    let index = arr.indexOf(15)
+    console.log(index); 
+</script>
+<script>
+let fruits = ["Apple", "Banana", "Cherry"];
+let result = fruits.join(" - ");
+    console.log(result);
+</script>
+
+<script>
+const text = "Javascript";
+console.log(text.charAt(4));
+
+let str = "Hello, World!";
+console.log(str.length);
+
+let stri = "HELLO, WORLD!";
+let lowerStr = stri.toLowerCase();
+console.log(lowerStr);
+
+let strin = "hello, world!";
+let upperStr = strin.toUpperCase();
+console.log(upperStr);
+
+let char = "*";
+console.log(char.repeat(5));
+
+let texts = "Hello, world!";
+console.log(texts.includes("world"));
+
+let stre = "Hello, World!";
+console.log(stre[0]);
+
+text = "Hello, World!";
+console.log(text.slice(0, 5));
+
+const word = "Hello, World"; 
+console.log("Index of 'H':", word.indexOf('H'));
+
+const texty = new String("Hello, World!");
+console.log(texty.valueOf());
+</script>
+
+<script>
+    document.write("Width:"+ screen.width);
+    document.write("Height:"+ screen.height);
+</script>
+
+<!-- <script>
+location.reload();
+</script> -->
+
+<button onclick="setTimeout(myFunction, 5000);">Try it</button><script>
+function myFunction() {
+alert('Hello');
+}
+</script>
+
+<p id="demo"></p>
+<script>
+setInterval(myTimer, 1000);
+function myTimer() {
+const d = new Date();
+document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+<div id="parent" style="border: 2px solid red; padding: 20px;">
+    Parent
+    <button id="child">Child</button>
+</div>
+<script>
+    document.getElementById('parent').addEventListener('click', () =>{
+        alert('Parent Clicked!');
+    });
+    document.getElementById('child').addEventListener('click', () =>{
+        alert('Child Clicked!');
+       
+    });
+</script>
+
+
+
+
+
+<div id="parents" style="border: 2px solid blue; padding: 20px;">  
+    Parent  
+    <button id="childs">Child</button>
+</div>
+<script>
+document.getElementById('parents').addEventListener(
+    'click',
+    () => {      
+        alert('Parent clicked during capture!');
+    },    
+    { capture: true }   
+);
+document.getElementById('childs').addEventListener(
+    'click',
+    () => {
+        alert('Child Clicked!');
+    }
+);
+</script>
+
+
+
+
+
+
+    <div id="parentst" style="border: 2px solid red; padding: 20px;">
+    Parent
+    <button id="childss">Child</button>
+</div>
+<script>
+    document.getElementById('parentst').addEventListener('click', () =>{
+        alert('Parent Clicked!');
+    });
+    document.getElementById('childss').addEventListener('click', () =>{
+        alert('Child Clicked!');
+        event.stopPropagation();  // Prevents the click event from bubbling up to the parentDiv
+    });
+    
+</script>
+
+
+ <ul id="parentList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+  </ul>
+
+  <script>
+    // Attach event listener to the parent <ul>
+    document.getElementById("parentList").addEventListener("click", function(event) {
+      if (event.target.tagName === "LI") {
+        alert("You clicked on: " + event.target.textContent);
+      }
+    });
+  </script>
+
+
+
+
+<a href="https://www.google.com/" id="link">Click Me</a>
+<script>
+    document.getElementById('link').addEventListener('click', (event) => 
+    {
+        event.preventDefault();
+        alert('Default prevented');
+
+    });
+</script>
+
+<br>
+<script>
+    const numberssss = [1, 2, 3, 4, 5];
+    const doubled = numberssss.map(num => num * 2);
+    document.write(doubled);
+</script>
+<br>
+
+
+
+
+<script>
+    const numbersssss = [1, 2, 3, 4, 5];
+    const evennumbers = numbersssss.filter(num => num % 2 === 0);
+    document.write(evennumbers);
+</script>
+<br>
+
+
+
+<script>
+const numberstt = [1, 2, 3, 4, 5];
+const sum = numberstt.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+document.write(sum);
+</script>
+<br>
+
+
+
+<script>
+    const numbersr = [10, 20, 30, 40, 50];
+    for (const num of numbersr) {
+         document.write(num);
+    }
+</script>
+<br>
+
+
+
+
+
+<script>
+    const scores = [85, 90, 78, 92, 88];
+    const [top1, top2, ...others] = scores;
+    document.write(top1, "<br>"); 
+    document.write(top2, "<br>"); 
+    document.write(others);
+</script>
+
+
+<br>
+<script>
+    let c = [1,34,5,6,7,78,8,8];
+    let d = [2,34,5,6,7,9,5,7,8];
+    let combinedArrayUsingRest=[...c,...d];
+    document.write(combinedArrayUsingRest);
+</script>
+<br>
+
+
+<script>
+    function greet(message, ...names) 
+    {  
+        document.write(message, "<br>"); 
+        document.write(names); 
+    }
+    greet("Hello", "Alice", "Bob", "Charlie");
+</script>
+</body>
+</html>

@@ -8,32 +8,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const parent = document.getElementById("parent");
   const child = document.getElementById("child");
 
-//   grandparent.addEventListener("click", () =>
-//     console.log("Grandparent - Capturing"), true
-//   );
+  grandparent.addEventListener("click", () =>
+    console.log("Grandparent - Capturing"), true
+  );
 
-//   parent.addEventListener("click", () =>
-//     console.log(">>> Parent - Capturing"), true
-//   );
+  parent.addEventListener("click", () =>
+    console.log(">>> Parent - Capturing"), true
+  );
 
-//   child.addEventListener("click", () =>
-//     console.log("Child - Capturing"), true
-//   );
-// });
-
-/* Target + Bubbling phase */
-child.addEventListener("click", () =>
-  console.log("Child - Target / Bubbling")
-);
-
-parent.addEventListener("click", () =>
-  console.log("Parent - Bubbling")
-);
-
-grandparent.addEventListener("click", () =>
-  console.log("Grandparent - Bubbling")
-);
+  child.addEventListener("click", () =>
+    console.log("Child - Capturing"), true
+  );
 });
+
+// /* Target + Bubbling phase */
+// child.addEventListener("click", () =>
+//   console.log("Child - Target / Bubbling")
+// );
+
+// parent.addEventListener("click", () =>
+//   console.log("Parent - Bubbling")
+// );
+
+// grandparent.addEventListener("click", () =>
+//   console.log("Grandparent - Bubbling")
+// );
+// });
 </script>
 </head>
 <body>
@@ -44,5 +44,64 @@ grandparent.addEventListener("click", () =>
   </div>
 </div>
 
+<h3>stopPropagation</h3>
+<div id="navbar">
+  <button id="home">Home</button>
+</div>
+<script>
+const navbar = document.getElementById("navbar");
+const home = document.getElementById("home");
+//without stopPropagation
+navbar.addEventListener("click", () => {
+  console.log("Navbar clicked");
+});
+
+home.addEventListener("click", () => {
+//   event.stopPropagation(); //with stopPropagation
+  console.log("Home clicked");
+});
+
+</script>
+
+
+<h3>preventDefault Event</h3>
+<form id="myForm">
+  <input type="text" placeholder="Enter name">
+  <button type="submit">Submit</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // stops page reload
+    document.getElementById("msg").textContent = "Form submission stopped!";
+});
+</script>
+
+<h3>Event Delegation</h3>
+
+<ul id="menu">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+<script>
+const ul = document.getElementById("menu");
+
+ul.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    console.log("Item clicked");
+  }
+});
+
+// const menu = document.getElementById("menu");
+
+// menu.addEventListener("click", function (event) {
+//   if (event.target.tagName === "LI") {
+//     console.log(event.target.textContent);
+//   }
+// });
+</script>
 </body>
 </html>

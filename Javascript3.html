@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Example</title>
+        <script src="script.js"></script>
+    </head>
+<body>
+<script>
+const word = "Hello, World"; 
+console.log("Index of 'H':", word.indexOf('H'));
+
+const texty = new String("Hello, World!");
+console.log(texty.valueOf());
+
+const textr = "Hello World! World is Beautiful";
+const replacedText = textr.replace("World", "Universe");
+console.log(replacedText);
+
+const textrf = "Hello World! World is Beautiful";
+const replacedAllText = textrf.replaceAll("World", "Universe");
+console.log(replacedAllText);
+
+const textys = "JavaScript is Awesome!";
+console.log(textys.startsWith("Java"));
+
+const textysa = "JavaScript is Awesome!";
+console.log(textysa.endsWith("is"));
+
+const textysi = "Hello, JavaScript World!";
+console.log(textysi.substring(0, 5));
+    
+const textysb = "Javascript is fun, and learning it is exciting";
+const wordsa = textysb.split(" ");
+console.log(wordsa);
+
+</script>
+
+<script>
+    let newDiv = document.createElement('div');
+    newDiv.textContent="This is a new div";
+    newDiv.className="my-class";
+    document.body.appendChild(newDiv);
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Example</title>
+    <style>
+        .my-class {
+           border: 1px solid black;
+        }
+    </style>
+    </head>
+<body>
+<script>
+ const person = {              
+    name: "Shubham",              
+    age: 25,                    
+    greet() {                   
+        console.log(             
+              `Hello, my name is ${this.name}!` 
+             );   }};
+             console.log(person.name);      
+             person.greet(); 
+    </script>
+    <script>
+        const company = {  
+            name: "TechCorp",  
+            address: {    
+                street: "123 Innovation Dr",    
+                city: "San Francisco",    
+                zip: "94107"  
+            },  
+            employees: [    
+                { name: "Shubham", role: "Developer" },    
+                { name: "Apeksha", role: "Manager" }  
+            ]};
+            console.log(company.name);   // "TechCorp" - Accessing a top-level property             
+            console.log(company.address.city); // "San Francisco" - Accessing a nested property
+            console.log(company.employees[0].name); // "Shubham" - Accessing a nested object's property inside an array
+    </script>
+
+    <script>
+        const user = {  
+            name: "Shubham",  
+            age: 25,
+            address: {    
+                city: "New York",    
+                zip: "10001"  
+            }
+        };  
+            user.name = "Apeksha";
+            user.address.city = "Los Angeles";
+            console.log(user);
+    </script>
+    <script>
+        const users = {  name: "Apeksha",  age: 30};// Adding new properties
+        users.email = "Apeksha@example.com";         // Add 'email' property
+        users["phone"] = "123-456-7890";         // Add 'phone' property
+        // Output the updated object
+        console.log(users)
+    </script>
+    <script>
+        let obj = {name:"John", age:30};
+        console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+        console.log(Object.entries(obj));
+    </script>
+
+    <script>
+        let persons = {  
+            name: "John",  
+            greet: function() {    
+                console.log("Hello, " + this.name); 
+
+         }};
+         persons.greet(); 
+    </script>
+    <script>
+        function Person(name, age) {  
+            this.name = name;  
+            this.age = age;
+        }
+        let person1 = new Person("John", 30);
+        let person2 = new Person("Jane", 25);
+        console.log(person1); 
+        console.log(person2); 
+    </script>
+    <script>
+        const myObject = { name: "John", age: 30 };
+        delete myObject.age;
+        console.log(myObject); 
+    </script>
+    <script>
+        const myObjects = { name: "John", age: 30 };
+        for (const property in myObjects) {  
+            console.log(`${property}: ${myObjects[property]}`);
+        }
+    </script>
+    <!-- <script>
+        var aProperty;
+        for(aProperty in navigator) {
+            document.write(aProperty);
+            document.write("<br />");
+        }
+    </script> -->
+    <script>
+        let arr = [1, 2, 3, 4];
+        arr.push(5);
+        console.log(arr);
+        arr.pop();
+        console.log(arr);
+    </script>
+    <script>
+        let array = [10, 20, 30, 40, 50];
+        let index = 2;
+        console.log(array.at(index));
+    </script>
+    <script>
+        let arrays = [1, 2, 3, 4];
+        arrays.unshift(0);
+        console.log(arrays);
+        arrays.shift();
+        console.log(arrays);
+    </script>
+    <script>  
+      let numbers = [1, 2, 3, NaN];
+      console.log(numbers.includes(NaN));
+    </script>
+     <script>  
+      let numberss = [10, 20, 30, 40, 50];
+      let found = numberss.find(num => num === 30);
+      console.log(found);
+    </script>
+        <script>
+            let fruits = ["Apple", "Banana", "Cherry"];
+            console.log(fruits.length);
+        </script>
+         <script>
+            let name = "John";
+            console.log(typeof name);
+        </script>
+         <script>
+            let numbersst = [10, 20, 30];
+            for (let i = 0; i < numbersst.length; i++) {  
+                console.log(numbersst[i]); 
+            }
+        </script>
+         <script>
+            let numbersstr = [10, 20, 30];
+            for (let index in numbersstr) {  
+                console.log(numbersstr[index]); 
+            }
+        </script>
+           <script>
+                let numberssst = [10, 20, 30];
+                numberssst.forEach(function(number) {  
+                    console.log(numberssst);
+                });
+           </script>
+            <script>
+                let numbersttr = [1, 2, 3, 4, 5];
+                delete numbersttr[2];
+                console.log(numbersttr);
+            </script>
+             <script>
+                let numberstrt = [1, 2, 3, 4, 5];
+                numberstrt[2]=8;
+                console.log(numberstrt);
+            </script>
+            <script>
+                let array1 = [1, 2, 3];
+                let array2 = [4, 5, 6];
+                let array3 = [7, 8, 9];
+                let combinedArray = array1.concat(array2, array3);
+                console.log(combinedArray);
+            </script>
+            <script>
+                let array4 = [40, 100, 1, 5, 25];
+                console.log(array4.sort());
+                let array5 = [40, 100, 1, 5, 25];
+                console.log(array5.sort((a, b) => a - b));
+            </script>
+            <script>
+                let array6 = [1, 2, 3, 4, 5];
+                console.log(array6.reverse());
+            </script>
+            <script>
+                let array7 = [10, 20, 30, 40, 50];
+                let slicedarray = array7.slice(1, 4);
+                console.log(slicedarray);
+            </script>
+            <script>
+                let array8 = [10, 20, 30];
+                array8.splice(1, 0, 15, 25);
+                console.log(array8);
+            </script>
+            <script>
+                let array9 = [5, 10, 15, 20, 25];
+                console.log(array9.indexOf(15));
+             </script>
+              <script>
+                let array10 = ["Apple", "Banana", "Cherry"];
+                console.log(array10.join("-"));
+             </script>
+              <script>
+               const text = "JavaScript";
+               console.log(text.charAt(4));
+             </script>
+             <script>
+               const str = "Hello, World!";
+               console.log(str.length);
+             </script>
+             <script>
+               const stree = "Hello, World!";
+               console.log(stree.toLowerCase());
+             </script>
+             <script>
+               const streer = "hello, world!";
+               console.log(streer.toUpperCase());
+             </script>
+             <script>
+               const char = "*";
+               console.log(char.repeat(5));
+             </script>
+             <script>
+               const streeri = "hello, world!";
+               console.log(streeri.includes("world!"));
+             </script>
+             <script>
+               const string1 = "Hello, World!";
+               console.log(string1.slice(0, 5));
+             </script>
+               <script>
+               const string2 = "Hello, World, World is beautiful";
+               console.log(string2.replace("World", "Universe"));
+             </script>
+             <script>
+               const string3 = "Hello, World, World is beautiful";
+               console.log(string3.replaceAll("World", "Universe"));
+             </script>
+              <script>
+               const string4 = "JavaScript is Awesome";
+               console.log(string4.startsWith("Java"));
+               console.log(string4.endsWith("is"));
+             </script>
+             <script>
+               const string5 = "JavaScript is Fun, and learning it is exciting";
+               console.log(string5.split(" "));
+             </script>
+            <script>
+                document.write("Width:"+ screen.width, "<br/>");
+                document.write("Height:"+ screen.height);
+            </script>
+            <script>
+                function Myfunction() {
+                    location.assign("https://www.itvedant.com");
+                }
+            </script>
+            <button onclick="Myfunction()">Load New Website</button>    
+             <!-- <script>
+                location.reload();
+            </script> -->
+             <script>
+                setTimeout(() => console.log("Hello, after 3 seconds!"), 3000);
+             </script>
+             <button onclick="setTimeout(Timer, 2000);">Try Timer</button>
+             <script>
+                function Timer(){
+                    alert("Hello, Welcome");
+                }
+             </script>
+
+             <p id="demo"></p>
+             <script>
+                setInterval(Timers, 1000);
+                function Timers() {
+                    const d = new Date();
+                    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+                }
+             </script>
+
+             <script>
+                let newDiv = document.createElement('div');
+                newDiv.textContent="This is a new div";
+                newDiv.className="my-class";
+                document.body.appendChild(newDiv);
+            </script>
+
+            <Form>
+            <label>Enter your name: </label><input type="text" id="fname" onkeyup="Keyup()">
+            </Form>
+            <script>
+            function Keyup() {  
+                let x = document.getElementById("fname");  
+                x.value = x.value.toUpperCase();}
+            </script>
+            <button id="myButton" onclick="handleClick"> Click Me </button>
+            <script>
+                const button = document.getElementById("myButton");
+                function handleClick() {    
+                    alert("Button clicked!");   
+                    button.removeEventListener("click", handleClick);
+                }
+                button.addEventListener("click", handleClick)
+            </script>
+
+        </body>
+    </html>

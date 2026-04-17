@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+  <h3>Object Literal</h3>  
+  <script>
+    const user = {
+      name: "Riya",
+      role: "Developer"
+    };
+    document.write(user.name+" "+user.role);
+    document.write("<br>");  
+  const student = { 
+        name: "Riya", 
+        rollNo: 21,  
+        course: "BSc", 
+        college: "ABC College"
+ };
+  document.write(student.name+" "+student.rollNo+" "+student.course+" "+student.college);
+</script>
+
+
+ <h3>Using New Object</h3>  
+  <script>
+    const users = new Object();
+      users.name = "Shyam";
+      users.role = "Testing";
+      document.write(users.name+" "+users.role);
+  </script>
+
+   <h3>Using Constructor Function</h3>  
+  <script>
+    function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    }
+
+    p = new Person("Roshan", 30);
+    document.write(p.name+" "+p.age);
+  </script>
+
+  <h3>Object inside another objects</h3>  
+  <script>
+    const employee = {
+      name: "Riya",
+      address: {
+        city: "Pune",
+        pincode: 411001
+      }
+};
+    document.write(employee.name+" "+employee.address.city+" "+employee.address.pincode);
+
+  </script>
+
+
+
+<h3>Dot Notation objectName.propertyName</h3>  
+<script>
+  const cart = {
+    item: "Laptop",
+    price: 50000,
+    "discount price": 45000
+};
+ document.write(cart.item+" "+cart.price);
+  </script>
+
+<h3>Bracket Notation objectName["propertyName"]</h3>  
+<script>
+  const carts = {
+    item: "Laptop",
+    price: 50000,
+    "discount price": 45000
+};
+ document.write(carts["item"]+" "+carts["price"]+" "+carts["discount price"]);
+  </script>
+
+
+
+<h3>CRUD Operation</h3>
+
+
+
+<h3>Functions</h3>  
+<script>
+const cart = {
+  item: "Laptop",
+  price: 50000,
+  quantity: 1
+};
+
+//Use of Object.keys
+document.write(Object.keys(cart), "<br>")  //[ 'item', 'price', 'quantity' ]
+
+//Use of Object.values
+document.write(Object.values(cart), "<br>") //[ 'Laptop', 50000, 1 ]
+
+//Use of Object.entries
+document.write(Object.entries(cart), "<br>") //[ [ 'item', 'Laptop' ]
+</script>
+  
+</body>
+</html>
